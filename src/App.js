@@ -795,17 +795,28 @@
       const [flagsName, setFlagName] = useState("");
       const [meaning, setMeaning] =useState("");
       const [reverse, setReverse] = useState("");
+      const [bigflag, setBigFlag] = useState("");
 
     flagNamePrinter = (flag) => {
 
-    console.log(flag);
+        console.log(flag);
 
-    var flagName = flags[flag];
+        var flagName = flags[flag];
 
-    setMeaning(flagName);
+        var bigFlag = flagsReverse[flagName];
+
+        setBigFlag(bigFlag);
+
+        setMeaning(flagName);
 
 
     }
+    flagshow = (flag) => {
+
+      console.log(flag)
+
+    }
+
 
     checkFlagName = (event) => {
 
@@ -822,7 +833,8 @@
 
       return (
         <div className="App">
-          <h2 className="padding1rem">Flag Emojis <span className="blueText">Interpreter</span> </h2>
+          <h2 className="padding1rem">Flag Emojis 
+          <span className="blueText"> Interpreter</span> </h2>
 
         
 
@@ -835,13 +847,14 @@
 
           <h3>You clicked: <span className="blueText">{meaning}</span></h3>
 
+            <h1><span className="bigFlag">{bigflag}</span></h1>
           <div>
             {
               flagArray.map((flag) => {
                 return(
 
                   <span 
-                  onClick={() => flagNamePrinter(flag)}
+                  onClick={() => flagNamePrinter(flag)      }
                   className="padding1rem bigFlags"
                   key={flag}
                   
@@ -855,17 +868,17 @@
 
             <h3>Made by <strong>Shubam Bhasin</strong>  with ❤️ in Jammu and Kashmir</h3>
             <h4>All Rights Reserved</h4>
-           <ul class="non-bullet">
-              <li className="list-inline padding1rem"><a href="http://github.com/shubambhasin" target="_blank"><i class="fa fa-github" aria-hidden="true"> Github</i></a>
+           <ul className="non-bullet">
+              <li className="list-inline padding1rem"><a href="http://github.com/shubambhasin" target="_blank"><i className="fa fa-github" aria-hidden="true"> Github</i></a>
               </li>
-              <li className="list-inline padding1rem"><a href="https://www.linkedin.com/in/shubam-bhasin-3854a4144/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"> LinkedIn</i></a>
+              <li className="list-inline padding1rem"><a href="https://www.linkedin.com/in/shubam-bhasin-3854a4144/" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"> LinkedIn</i></a>
               </li>
 
-              <li className="list-inline padding1rem"><a href="http://instagram.com/shubambhasin" target="_blank"><i class="fa fa-instagram" aria-hidden="true">
+              <li className="list-inline padding1rem"><a href="http://instagram.com/shubambhasin" target="_blank"><i className="fa fa-instagram" aria-hidden="true">
                           Instagram</i></a></li>
-              <li className="list-inline padding1rem"><a href="https://facebook.com/shubam.bhasin" target="_blank"><i class="fa fa-facebook" aria-hidden="true">
+              <li className="list-inline padding1rem"><a href="https://facebook.com/shubam.bhasin" target="_blank"><i className="fa fa-facebook" aria-hidden="true">
                           Facebook</i></a></li>
-              <li className="list-inline padding1rem"><a href=""  target="_blank"><i class="fa fa-reddit" aria-hidden="true"> Reddit</i></a>
+              <li className="list-inline padding1rem"><a href=""  target="_blank"><i className="fa fa-reddit" aria-hidden="true"> Reddit</i></a>
               </li>
 
             </ul>
