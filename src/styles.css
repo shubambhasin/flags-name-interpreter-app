@@ -1,0 +1,61 @@
+
+body
+{
+  background-color: lightcyan
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.padding1rem
+{
+  padding: 0.5rem;
+}
+.input
+{
+  text-align: center;
+  width: 60%;
+  height: 10vh;
+
+  border: 0.1px solid lightblue;
+  border-radius: 0.5rem;
+
+}
+
+.bigFlags
+{
+  font-size: x-large;
+}
+
+.blueText
+{
+  color: #03d1ff;
+}
+
+footer
+{
+  margin-top: 2rem;
+  background-color: #03d1ff;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+footer li a{
+  text-decoration: none;
+  color: white;
+}
+
+.list-inline 
+{
+
+  display: inline;
+  list-style: none;
+  
+}
+.padding1rem
+{
+  padding: 0.5rem
+}
