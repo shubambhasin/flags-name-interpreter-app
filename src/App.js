@@ -265,7 +265,7 @@
       ,"🇿🇼": "Zimbabwe"
       }
 
-    var flagsReverse = {
+  var flagsReverse = {
 
       
   "Ascension Island": "🇦🇨"
@@ -811,29 +811,21 @@
 
 
     }
-    flagshow = (flag) => {
-
-      console.log(flag)
-
-    }
 
 
     checkFlagName = (event) => {
 
-      var userInput = event.target.value;
+      var userInput = event.target.value;// to get what value user entered in the input
+      var flagName = flags[userInput]; //to get flagname from flags object
+      var countryName = flagsReverse[userInput]; //to get Flag from reverse flag Object
 
-
-
-      var flagName = flags[userInput];
-      var countryName = flagsReverse[userInput];
-
-      setReverse(countryName)
-      setFlagName(flagName)
+      setReverse(countryName) //
+      setFlagName(flagName)//
     }
 
       return (
         <div className="App">
-          <h2 className="padding1rem">Flag Emojis 
+          <h2 className="padding1rem">Country Flag
           <span className="blueText"> Interpreter</span> </h2>
 
         
@@ -841,9 +833,11 @@
           <input
           className="input padding1rem"
           onChange={checkFlagName} placeholder="Enter Flag Emoji or Country Name"/>
-          <p><strong><small>Note:</small></strong><small>Country first Letter should be in Caps Lock, e.g., <strong>India</strong></small></p>
+          <p><strong><small>Note: </small></strong><small>Country 
+            first Letter should be in Caps Lock, e.g., <strong>India</strong></small></p>
 
-          <h3 className="padding1rem">This Flag belong to: {reverse}<span className="blueText">{flagsName}</span></h3>
+          <h3 className="padding1rem">☝️ Above entered name belong to 👇: </h3>
+          <div><span className="blueText bigFlag">{reverse}</span></div>
 
           <h3>You clicked: <span className="blueText">{meaning}</span></h3>
 
